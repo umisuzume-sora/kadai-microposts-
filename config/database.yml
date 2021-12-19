@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: microposts_production
-  username: microposts
-  password: <%= ENV['MICROPOSTS_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: micropost-sei-20211219_production
+  username: micropost-sei-20211219
+  password: <%= ENV['MICROPOST-SEI-20211219_DATABASE_PASSWORD'] %>
